@@ -29,7 +29,7 @@ Yes on average, the Boston city yields 50$ more rental prices compared to Seattl
 - Does review score/number of reviews impact the price or bookings?
 Average review score has no/very less relationship with price. Well !It makes sense that reviews don't drive the price :-), rather they might impact the number of bookings(which can be analyzed with bookings data set )
 If you had observed 'reviews_per_month' - the more the number of reviews the less the price of the property . Well it might NOT be a causal relationship. Rather guests who had negative experiences tend to give more reviews than people with positive/neutral experiences.
-[Click for More info](https://medium.com/@aravind.deva/what-drives-the-rental-price-of-homes-and-rooms-for-guest-stay-496d7726d20)
+[Click for More info](https://medium.com/@aravind.deva/what-drives-the-rental-price-of-homes-and-rooms-for-guest-accommodation-496d7726d20)
 
 # Contribute
 The projects are submitted for review.However,in case you find a bug, please raise an issue.Kindly fork the repo and create a pull request to merge into the source repo.
