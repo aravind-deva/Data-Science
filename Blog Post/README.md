@@ -1,3 +1,6 @@
+# Follow this Jupyter notebook
+[Blog Post](https://github.com/aravind-deva/Data-Science/blob/main/Blog%20Post/BlogPost.ipynb)
+
 # AirBnB listings analysis
 - import libraries
 - read in csv files
