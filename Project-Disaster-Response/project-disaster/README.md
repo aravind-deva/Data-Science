@@ -13,9 +13,19 @@
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
-
-3. Run the following command in the project home directory to run your web app.
+        
+        
+        ![scores](https://github.com/aravind-deva/Data-Science/blob/main/Project-Disaster-Response/Scores.PNG)
+3. Run the following command in the **project home directory** to run your web app.
     `python app/run.py`
+   ### !! NOTE !! ## 
+    - Depending on the version of sklearn you might be running into an error with joblib, please uncomment one or the other lines below in run.py
+      
+      ```
+      #from sklearn.externals import joblib
+      
+      import joblib 
+      ```
 
 4. Local : 
       Go to http://localhost:3001/
@@ -49,6 +59,6 @@
 1. The message(text) is tokenized , lemmatized (verb and nouns) using nltk to convert it into a TF-IDF Vectorized form
 2. I have use MultiOutputClassifier with a base AdaboostClassifier(with class_weight). I used GridSearchCV  cross validation to find the ideal n_estimators
 3. I have also tried SVC(rbf & linear kernels) and KNeighborsClassifier. KNearest neighbors is a very simple yet a great classifier.However for this data set, Adaboost is winning over others by a decent margin.
-4. The dataset is imbalanced. So the accuracy metric is favoured towards the highest class.The weighted-average f1-score is a decent metric to evaluate.
-5. The best way is to make the classes balanced by using **oversampling/undersampling/SMOTE and other** techniques. 
+4. The dataset is imbalanced. So the accuracy metric is favored towards the majority class.The average precision/f1-score metric of individual class is highly effected by extreme values. Therefore the weighted-average f1-score/precision is a decent metric to asses.However the data set is imbalanced which leads to model's low skill levels in detecting true positives(if they are in minority)
+5. The best way is to make the classes balanced by using **oversampling/undersampling/SMOTE and other** techniques. My personal choice would be to use SMOTE (It preserves all information and generates/augments new data points with in the same cluster of data points using an average sample strategy)
 6. That said, I chose to use a simple *class_weight='balanced'* in the base estimator. With this there is more penalty for misclassifying a minority labelled data point. Thus I have a achieved a non-zero f1-score for minority labelled datasets.
