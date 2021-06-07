@@ -19,7 +19,7 @@
 3. Run the following command in the **project home directory** to run your web app.
     `python app/run.py`
    ### !! NOTE !! ## 
-    - Depending on the version of sklearn you might be running into an error with joblib, please uncomment one or the other lines below in run.py
+    - We have ensured installing joblib==1.0.1 in the requirements.txt.However if it is missing then depending on the version of sklearn you might be running into an error with joblib.Please uncomment one or the other lines below in run.py
       
       ```
       #from sklearn.externals import joblib
