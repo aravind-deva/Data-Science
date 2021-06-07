@@ -1,12 +1,12 @@
 # Disaster Response Pipeline Project
 
-### Instructions:Local and on Workspace/
-1. Local PC Only:
+### Instructions:
+1. *Local PC:*
     - conda create -n deploy_env python==3.6.13 (Creates a virtual environment with Heroku supported python version )
     - conda activate deploy_env (activate the environment)
     - pip install -r requirements.txt (installs the required dependencies)
 
-2. Local PC & Workspace:
+2. *Local PC & Workspace:*
    Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
@@ -16,10 +16,10 @@
         
         
         ![scores](https://github.com/aravind-deva/Data-Science/blob/main/Project-Disaster-Response/Scores.PNG)
-3. Run the following command in the **project home directory** to run your web app.
+3. *Run the following command in the **project home directory** to run your web app.*
     `python app/run.py`
    ### !! NOTE !! ## 
-    - We have ensured installing joblib==1.0.1 in the requirements.txt.However if it is missing then depending on the version of sklearn you might be running into an error with joblib.Please uncomment one or the other lines below in run.py
+    - We have ensured installing joblib in the requirements.txt.However if in workspace,joblib is missing, then depending on the version of sklearn you might be running into an error with joblib.Please uncomment one or the other lines below in run.py
       
       ```
       #from sklearn.externals import joblib
@@ -27,9 +27,9 @@
       import joblib 
       ```
 
-4. Local : 
+4. *Local:* 
       Go to http://localhost:3001/
-5. Workspace: 
+5. *Workspace:*
     Follow the instructions in udacity:
     
    /home/workspace# env | grep WORK
@@ -37,7 +37,7 @@
     WORKSPACEID=
 ### Cloud Deployment
 6. The project has been deployed to Heroku cloud app hosting platform (https://aravind-deva-dsnd-disaster.herokuapp.com/)
-- Requires Procfile and requirements.txt
+- Requires Procfile , requirements.txt ,runtime.txt
 ### Web App details
    - Feel free to browse (https://aravind-deva-dsnd-disaster.herokuapp.com/)
    - It has a home page with two dashboards (pie chart and bar chart ) to indicate the top classified messages 
@@ -57,7 +57,9 @@
 
 ## ML 
 1. The message(text) is tokenized , lemmatized (verb and nouns) using nltk to convert it into a TF-IDF Vectorized form
-2. I have use MultiOutputClassifier with a base AdaboostClassifier(with class_weight). I used GridSearchCV  cross validation to find the ideal n_estimators
+2. I have use MultiOutputClassifier with a base AdaboostClassifier(with class_weight). I used GridSearchCV  cross validation to find the ideal n_estimators ```
+            AdaBoostClassifier(DecisionTreeClassifier(max_depth=1,class_weight='balanced'),n_estimators=100) 
+            ```
 3. I have also tried SVC(rbf & linear kernels) and KNeighborsClassifier. KNearest neighbors is a very simple yet a great classifier.However for this data set, Adaboost is winning over others by a decent margin.
 4. The dataset is imbalanced. So the accuracy metric is favored towards the majority class.The average precision/f1-score metric of individual class is highly effected by extreme values. Therefore the weighted-average f1-score/precision is a decent metric to asses.However the data set is imbalanced which leads to model's low skill levels in detecting true positives(if they are in minority)
 5. The best way is to make the classes balanced by using **oversampling/undersampling/SMOTE and other** techniques. My personal choice would be to use SMOTE (It preserves all information and generates/augments new data points with in the same cluster of data points using an average sample strategy)
