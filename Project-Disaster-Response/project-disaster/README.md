@@ -6,26 +6,30 @@ The project includes a web app where an emergency worker can input a new message
 
 ## Project Structure(project-disaster)
 ```
-app
-| - templates
-| |- master.html # main page of web app
-| |- go.html # classification result page of web app
-|- run.py # Flask file that runs app
-data
-|- disaster_categories.csv # data to process
-|- disaster_messages.csv # data to process
-|- process_data.py
-|- DisasterResponse.db # database to save clean data to
-models
-|- train_classifier.py
-|- classifier.pkl # saved model
-utils
-|- token_fn.py # Utility function to tokenize texts while building the model and also while predicting the text
-- requirements.txt #dependencies for Heroku deployment as well as local python env creation
-- Procfile #Boot Up script on Heroku
-- runtime.txt #Python version Stack selection by Heroku
-README.md
-
+├── app
+│   ├
+│   │   
+│   │   
+│   ├── run.py          # Flask file that runs the web app 
+│   └── templates
+│       ├── go.html     # classification result page of web app
+│       └── master.html # main page of web app
+├── data
+│   ├── disaster_categories.csv  # file containing labels of the disaster messages
+│   ├── disaster_messages.csv    # file containing messages,text and other attributes
+│   ├── DisasterResponse.db      # file database to save the cleaned data 
+│   └── process_data.py          # python ETL script which loads the csv files, cleans,processes and saves to db (ETL)
+├── models
+│   ├── classifier.pkl           # saved model
+│   └── train_classifier.py      # python ML pipeline script to read data,train the model and persis the model
+├── Procfile                     # boot Up script on Heroku
+├── README.md                    # gives a description of the project,how to run it and documentation behind the analysis
+├── requirements.txt              # dependencies for Heroku deployment & local python env creation
+├── runtime.txt                   # oython version Stack selection by Heroku
+└── utils
+    ├
+    │
+    └── token_fn.py               # Utility function to tokenize texts while building the model and also while predicting the text
 ```
 
 ### Instructions:
