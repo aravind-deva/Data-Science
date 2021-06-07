@@ -29,9 +29,11 @@
 6. The project has been deployed to Heroku cloud app hosting platform (https://aravind-deva-dsnd-disaster.herokuapp.com/)
 - Requires Procfile and requirements.txt
 ### Web App details
-    It has home page with two dashboards (pie chart and bar chart ) to indicate the top classified messages 
-    It has a text box to identify the category using a machine learning model
-    The classified page also links to various organizations to reach for the relevant categories.
+   - It has home page with two dashboards (pie chart and bar chart ) to indicate the top classified messages 
+   - It has a text box to identify the category using a machine learning model
+   - The classified page also links to **various organizations** such as Red Cross,UNICEF,Ameri Cares etc., to reach out to.
+   ![Classification Page](https://github.com/aravind-deva/Data-Science/blob/main/Project-Disaster-Response/Classfication%20Example.PNG)
+   ![Home Page](https://github.com/aravind-deva/Data-Science/blob/main/Project-Disaster-Response/Top%20Categories.PNG)
 
 ### Data Insights
 1. The dataset consists of disaster event messages and the corresponding hand labelled classification of the message into various categories such as earthquake,flood,storm related. A single message can be categorized as multi categories. So this is a **multi label** classification.
