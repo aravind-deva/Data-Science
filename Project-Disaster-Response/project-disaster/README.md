@@ -38,6 +38,7 @@
 ### Cloud Deployment
 6. The project has been deployed to Heroku cloud app hosting platform (https://aravind-deva-dsnd-disaster.herokuapp.com/)
 - Requires Procfile , requirements.txt ,runtime.txt
+7.  Heroku may be booting/scaling up the app at various time windows.During that window, you may face timeout error while accessing the heroku webapp. Please retry it.
 ### Web App details
    - Feel free to browse (https://aravind-deva-dsnd-disaster.herokuapp.com/)
    - It has a home page with two dashboards (pie chart and bar chart ) to indicate the top classified messages 
