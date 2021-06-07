@@ -69,10 +69,13 @@ def build_model():
     [
     ('vect',CountVectorizer(tokenizer=tokenize)),
     ('tf',TfidfTransformer()),
-    ('clf',MultiOutputClassifier(AdaBoostClassifier(DecisionTreeClassifier(max_depth=1,class_weight='balanced'),n_estimators=100)))   
+    ('clf',MultiOutputClassifier(AdaBoostClassifier(DecisionTreeClassifier(max_depth=1,class_weight='balanced'))))   
     ]
     )
-    return pipeline
+    parameters = {'clf__estimator__n_estimators':[50,100,150]}
+
+    cv = GridSearchCV(pipeline,param_grid=parameters)
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
@@ -111,6 +114,8 @@ def main():
         
         print('Training model...')
         model.fit(X_train, Y_train)
+        
+        print(model.best_params_)
         
         print('Evaluating model...')
         evaluate_model(model, X_test, Y_test, category_names)
