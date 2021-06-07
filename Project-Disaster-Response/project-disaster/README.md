@@ -1,5 +1,37 @@
 # Disaster Response Pipeline Project
 
+## Summary
+The goal of this project is to analyze disaster data from Figure Eight containing real messages that were sent during disaster events and then use a ML pipeline to build a model that classifies disaster messages.
+The project includes a web app where an emergency worker can input a new message and get classification results in several categories. It will also display visualizations of the data. 
+
+## Project Structure(project-disaster)
+```
+├── app
+│   ├
+│   │   
+│   │   
+│   ├── run.py          # Flask file that runs the web app 
+│   └── templates
+│       ├── go.html     # classification result page of web app
+│       └── master.html # main page of web app
+├── data
+│   ├── disaster_categories.csv  # file containing labels of the disaster messages
+│   ├── disaster_messages.csv    # file containing messages,text and other attributes
+│   ├── DisasterResponse.db      # file database to save the cleaned data 
+│   └── process_data.py          # python ETL script which loads the csv files, cleans,processes and saves to db (ETL)
+├── models
+│   ├── classifier.pkl           # saved model
+│   └── train_classifier.py      # python ML pipeline script to read data,train the model and persis the model
+├── Procfile                     # boot Up script on Heroku
+├── README.md                    # gives a description of the project,how to run it and documentation behind the analysis
+├── requirements.txt              # dependencies for Heroku deployment & local python env creation
+├── runtime.txt                   # oython version Stack selection by Heroku
+└── utils
+    ├
+    │
+    └── token_fn.py               # Utility function to tokenize texts while building the model and also while predicting the text
+```
+
 ### Instructions:
 1. *Local PC:*
     - conda create -n deploy_env python==3.6.13 (Creates a virtual environment with Heroku supported python version )
