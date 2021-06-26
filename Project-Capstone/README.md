@@ -1,12 +1,12 @@
 # Arvato customer Segmentation
 
-This is my Data Scientist Capstone project. The goal of this project is to analyze demographics information  and identify clusters of the general population, customer population and use this information for initiating marketing campaigns to potential customers.Also not all leads respond, based on historical response, try to identify the leads whose response probability is higher for targeted campaigns. 
+This is my Data Scientist Capstone project. The goal of this project is to analyze demographics information  and identify clusters of the general population, customer population and use this information for initiating marketing campaigns to potential customers.Also not all leads respond, based on historical response, try to identify the leads whose response probability is higher for targeted campaigns.Also, a Kaggle Data Science competition is hosted to which our predictions have to be uploaded.
 
 ## Summary
-The project consists of three parts 
+The strategy for solving this problem is to use 
 1. Unsupervised Learning for clustering the general population of Germany and also map customers of a mail order company to the appropriate clusters.
 2. Supervised Learning for predicting mail campaign response.
-3. Submitting prediction response to Kaggle Data Science competition.
+
 
 ## Medium Blog Post
 [Click here for more details](https://aravind-deva.medium.com/data-scientist-capstone-project-real-life-customer-segmentation-4d1441e01855)
@@ -15,8 +15,8 @@ The project consists of three parts 
 ```
 
 ├───Project-Capstone
-│   └───Arvato Project Workbook.ipynb
-│   ├───Arvato Project Workbook.html
+│   └───Arvato Project Workbook.ipynb #Jupyter notebook of the project
+│   ├───Arvato Project Workbook.html #HTML version of the notebook
 
 ```
 
@@ -55,7 +55,7 @@ The project consists of three parts 
 2. I have transformed Customer Dataset using PCA above and mapped them to clusters , Most of the customers are concentrated on clusters 11,6,3 
 3. ![Clusters](https://github.com/aravind-deva/Data-Science/blob/main/Project-Capstone/Customer%20Segmentation.png)
 4. The mail order campaign training data was targeted among the same clusters are above along with RESPONSE column
-5. The dataset is imbalanced. So the accuracy metric is favored towards the majority class.The 
+5. The dataset is imbalanced. So the accuracy metric is favored towards the majority class.Instead metrics like ROC-AUC Score/PR-AUC score can be used. 
 6. The best way is to make the classes balanced by using **oversampling/undersampling/SMOTE and other** techniques. My personal was SMOTE (It preserves all information and generates/augments new data points with in the same cluster of data points using an average sample strategy)
 7. That said,SMOTE was slighly worse compared to models trained with out SMOTE. Thats because of overfitting/not using advanced techniques for oversampling. 
 
