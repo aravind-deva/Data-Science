@@ -26,11 +26,13 @@ The project consists of three parts 
 	
 2. *Installation:*
 	
+	```
 	!pip install -U numpy
 	!pip install imbalanced-learn
 	!pip install --upgrade setuptools
 	!pip install --upgrade pip
 	!pip install xgboost
+	```
 	
 3. *Execute the notebook*
 	You can run the entire notebook at once by clicking on the 'Restart Kernel and then rerun the whole notebook 
