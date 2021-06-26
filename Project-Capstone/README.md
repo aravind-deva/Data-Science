@@ -8,6 +8,9 @@ The project consists of three parts 
 2. Supervised Learning for predicting mail campaign response.
 3. Submitting prediction response to Kaggle Data Science competition.
 
+## Medium Blog Post
+[Click here for more details](https://aravind-deva.medium.com/data-scientist-capstone-project-real-life-customer-segmentation-4d1441e01855)
+
 ## Project Structure(project-disaster)
 ```
 
@@ -42,6 +45,7 @@ The project consists of three parts 
 3. Since **0,-1,9** are the general unknown values representation.I have imputed null values with careful study of the columns and their unknown column representation 
 4. I have done PCA and 100 columns were able to explain 99% of the variance 
 5. Simple 2component PCA plot suggests data is not clearly separated.
+
 ![PCA Variance](https://github.com/aravind-deva/Data-Science/blob/main/Project-Capstone/pca.png)
 
 ## ML 
