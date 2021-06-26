@@ -7,15 +7,20 @@ This repo contains real world projects solved  as part of Udacity  Data Science 
 
 - Each project will have a directory named after the objective it is going to achieve. 
 
-## Project Structure
+## Repo Structure
 
 ├───Project-Blog Post 
+
 ├───Project-Capstone
+
 ├───Project-Disaster-Response 
+
 └───Project-Recommendation With IBM
 
 _Example_: 
+
 **Project-Blog Post** specifically contains analysis of airbnb listings kaggle data sets
+
 **Project-Capstone** specifically contains Arvato Capstone project 
 
 
@@ -25,4 +30,8 @@ In case you find a bug, please raise an issue.Kindly fork the repo and create a 
 
 # License
 Licensed under [LICENSE](LICENSE)
+
+# Acknowledgements
+
+Thanks to Udacity and its forums for all the courses and all partners for providing us the datasets 
 
