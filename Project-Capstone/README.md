@@ -47,7 +47,7 @@ The project consists of three parts 
 ## ML 
 1. I have used KMeans algorithm as DBScan needs separate clusters and Meanshift is computally intensive
 2. I have transformed Customer Dataset using PCA above and mapped them to clusters , Most of the customers are concentrated on clusters 11,6,3 
-3. ![Clusters](https://github.com/aravind-deva/Data-Science/blob/main/Project-Capstone/ClusterDifferences.PNG)
+3. ![Clusters](https://github.com/aravind-deva/Data-Science/blob/main/Project-Capstone/Customer%20Segmentation.png)
 4. The mail order campaign training data was targeted among the same clusters are above along with RESPONSE column
 5. The dataset is imbalanced. So the accuracy metric is favored towards the majority class.The 
 6. The best way is to make the classes balanced by using **oversampling/undersampling/SMOTE and other** techniques. My personal was SMOTE (It preserves all information and generates/augments new data points with in the same cluster of data points using an average sample strategy)
