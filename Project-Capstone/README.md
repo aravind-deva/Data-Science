@@ -58,7 +58,7 @@ I have achieved an ROC- AUC score of 0.79 with only 109 columns and GradientBoos
 ![Kaggle Leaderboard](https://github.com/aravind-deva/Data-Science/blob/main/Project-Capstone/Rank.PNG)
 
 # License
-Licensed under [LICENSE](LICENSE)
+Licensed under [LICENSE](https://github.com/aravind-deva/Data-Science/blob/main/LICENSE)
 
 # Acknowledgements
 
