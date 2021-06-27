@@ -58,6 +58,8 @@ The strategy for solving this problem is to use
 5. The dataset is imbalanced. So the accuracy metric is favored towards the majority class.The average precision/f1-score metric of individual class is highly effected by extreme values. Therefore the weighted-average f1-score/precision can be looked at. Instead of accuracy, metrics like ROC-AUC Score/PR-AUC score can be used to evaluate the model’s generic capability.
 6. The best way is to make the classes balanced by using **oversampling/undersampling/SMOTE and other** techniques. My personal was SMOTE (It preserves all information and generates/augments new data points with in the same cluster of data points using an average sample strategy)
 7. That said,SMOTE was slighly worse compared to models trained with out SMOTE. Thats because of overfitting/not using advanced techniques for oversampling. 
+![Results](https://github.com/aravind-deva/Data-Science/blob/main/Project-Capstone/NoSmote.PNG)
+
 
 ## Kaggle
 I have achieved an ROC- AUC score of 0.79 with only 109 columns and GradientBoostClassifier. This is my current leader board position(133) in the data Science Kaggle competition as on 26th Jun 2021
