@@ -1,0 +1,35 @@
+Git commands 
+
+
+
+git log  --after=2023-10-01 --until=2023-10-30 --name-status --reverse
+
+git show --name-status <commit>
+
+Developer Settings:
+Personal access token
+
+
+Git checkout <commit> => Head detached => detached to a particular commit - not a named branch
+
+Git checkout <filename> -> discard changes to <filename> and replace with head
+
+Git checkout —force <branch> -> discard local changes (not untracked) and switch branch
+
+Git checkout <branch> -> local changes are retained (not untracked) if there are no conflicts with <branch>
+
+Git clean -f -x :  Remove untracked files
+
+========
+
+Git reset —hard <commit> -> changes are discarded
+
+Still in the same branch. State is reset to <commit> hash
+
+====
+
+GitHub CLI
+
+gh pr view <pullreq_num> --json files --jq '.files.[].path'
+
+[--state merged ]
